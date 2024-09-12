@@ -309,6 +309,15 @@ p {
   align-items: flex-start;
 }
 
+.hero-wrapper.flex.half {
+  grid-column-gap: 148px;
+  grid-row-gap: 148px;
+  grid-template-rows: auto;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-columns: 1fr;
+  display: grid;
+}
+
 .hero-split {
   flex-direction: column;
   justify-content: flex-start;
@@ -335,6 +344,11 @@ p {
   color: var(--black);
   text-align: center;
   margin-bottom: 0;
+}
+
+.margin-bottom-24px.title.dark.contact {
+  text-align: left;
+  line-height: 1.2;
 }
 
 .margin-bottom-24px.smalltitle {
@@ -878,6 +892,31 @@ p {
   display: flex;
 }
 
+.form-block {
+  width: 100%;
+}
+
+.form-disk {
+  grid-column-gap: 50px;
+  grid-row-gap: 50px;
+  flex-flow: column;
+  grid-template-rows: auto auto;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-auto-columns: 1fr;
+  place-items: center;
+  display: flex;
+}
+
+.form-disk.max {
+  width: 100%;
+  max-width: 100%;
+}
+
+.success-message {
+  background-color: var(--black);
+  color: var(--white);
+}
+
 @media screen and (max-width: 991px) {
   .container {
     max-width: 728px;
@@ -939,6 +978,12 @@ p {
     flex-flow: column;
   }
 
+  .hero-wrapper.flex.half {
+    grid-column-gap: 2rem;
+    grid-row-gap: 2rem;
+    display: flex;
+  }
+
   .hero-split {
     max-width: 100%;
     margin-bottom: 40px;
@@ -992,6 +1037,11 @@ p {
 
   .footer-social-block-three {
     margin-top: 40px;
+  }
+
+  .form-disk {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    width: 100%;
   }
 }
 
@@ -1143,6 +1193,12 @@ p {
     font-size: 14px;
     line-height: 20px;
   }
+
+  .form-disk {
+    grid-column-gap: 40px;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-top: 15px;
+  }
 }
 
 @media screen and (max-width: 479px) {
@@ -1173,13 +1229,8 @@ p {
     background-color: var(--black);
   }
 
-  .hero-heading-center.short {
+  .hero-heading-center.short, .hero-heading-center.third {
     padding: 4rem 2rem;
-  }
-
-  .hero-heading-center.third {
-    padding-top: 4rem;
-    padding-bottom: 4rem;
   }
 
   .hero-heading-center.no-gapp {
@@ -1217,6 +1268,10 @@ p {
     grid-column-gap: 4rem;
     grid-row-gap: 4rem;
     margin-bottom: 0;
+  }
+
+  .margin-bottom-24px.title.dark.contact {
+    text-align: center;
   }
 
   .margin-bottom-24px.smalltitle {
@@ -1346,6 +1401,19 @@ p {
     display: flex;
     position: absolute;
     inset: auto 0% 2rem;
+  }
+
+  .form-disk {
+    grid-column-gap: 20px;
+    grid-row-gap: 40px;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+  }
+
+  .form-disk.max {
+    flex-flow: column;
+    min-width: auto;
+    display: flex;
   }
 }
 
