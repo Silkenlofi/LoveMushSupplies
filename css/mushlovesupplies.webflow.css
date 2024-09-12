@@ -917,6 +917,11 @@ p {
   color: var(--white);
 }
 
+.form {
+  width: 100%;
+  min-width: 30vw;
+}
+
 @media screen and (max-width: 991px) {
   .container {
     max-width: 728px;
